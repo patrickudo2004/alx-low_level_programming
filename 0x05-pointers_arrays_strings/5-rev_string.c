@@ -15,7 +15,7 @@ void rev_string(char *s)
 		end++;
 	}
 	len = a + 1;
-	gegin = s;
+	begin = s;
 	for (a = 0; a < len / 2; a++)
 	{
 		char x;
