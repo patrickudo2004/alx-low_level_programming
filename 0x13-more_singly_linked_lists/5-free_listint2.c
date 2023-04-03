@@ -1,7 +1,10 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #include "lists.h"
 /**
  * free_listint2 - Free nodes and list and set head to null
- * @head: This is my struct
+ * @head: pointer
  */
 void free_listint2(listint_t **head)
 {
@@ -10,13 +13,10 @@ void free_listint2(listint_t **head)
 	{
 		return;
 	}
-	while ((*head) != NULL)
+	while (*head != NULL)
 	{
-		listint_t *tmp;
-
-		tmp = (*head);
-		free(tmp);
+		listint_t *tmp = *head;
 		(*head) = (*head)->next;
+		free(tmp);
 	}
-	(*head) = NULL;
 }
