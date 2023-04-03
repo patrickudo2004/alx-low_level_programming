@@ -1,7 +1,8 @@
+#include <stdlib.h>
 #include "lists.h"
 /**
  * free_listint - Free nodes and list
- * @head: This is my struct
+ * @head: pointer
  */
 void free_listint(listint_t *head)
 {
